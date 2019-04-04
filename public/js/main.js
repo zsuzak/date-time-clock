@@ -1,5 +1,11 @@
 var d = new Date();
-var full = (d.getUTCMonth()+1) + '.' + d.getUTCDate() + '.' + d.getUTCFullYear();
+var month = d.getUTCMonth()+1;
+var day = d.getUTCDate();
+
+month = (month < 10) ? "0" + month : month;
+day = (day < 10) ? "0" + day : day;
+
+var full = month + '.' + day+ '.' + d.getUTCFullYear();
 
 function showTime () {
     var date = new Date();
